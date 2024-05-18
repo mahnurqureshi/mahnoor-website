@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahnur Construction Co.</title>
+
+<!--MAHNOOR ARSHAD QURESHI FA-2022/BS-DFCS/003 -->
+<style>
+  /* Reset default styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .contact-info {
+  margin-left: 20px; /* Pushes the "Contact Us" section to the left */
+  
+}
+
+.contact-info form input[type="text"] {
+    width: calc(100% - 90px); /* Adjust the width as needed */
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+  }
+
+  header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+  
+  
+  
+
+  nav ul {
+    display: flex;
+    list-style: none;
+
+  }
+
+  nav ul li {
+    margin-left: 25px;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover {
+    background-color: #666;
+  }
+
+  nav ul li select,
+  nav ul li button {
+    font-size: 15px; /* Set the font size */
+    font-family: Arial, sans-serif; /* Set the font family */
+    background-color: #333; /* Set the background color */
+    color: #fff; /* Set the text color */
+    padding: 10px 10px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 15px; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer */
+    text-decoration: none; /* Remove underline */
+  }
+
+  nav ul li select:hover,
+  nav ul li button:hover {
+    background-color: #666; /* Change background color on hover */
+  }
+
+  .logo h1 {
+    font-size: 20px;
+    color: #ffcc00;
+    margin-right: 10px ;
+    
+  }
+ 
+  
+  .logo-search {
+    display: flex;
+    align-items: center; 
+    
+  }
+
+
+  .banner {
+    background-image: url('https://c8.alamy.com/comp/CFCN5N/ainscough-liebherr-ltm-1500-81-500-tonne-all-terrain-mobile-crane-CFCN5N.jpg');
+    background-repeat: no-repeat;
+    
+    padding: 100px 0;
+    text-align: center;
+  }
+
+  .banner h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ebdada;
+  }
+  .banner h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .banner button {
+    padding: 10px 20px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .business-type {
+    background: #f5f5f5;
+    padding: 50px 0;
+  }
+
+  .business-type h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .business-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .card {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .card h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .card p {
+    margin-bottom: 20px;
+    color: #666;
+  }
+
+  .card a {
+    padding: 10px 20px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .latest-projects {
+    padding: 50px 0;
+    background-color: #e2d0d0;
+    color: #070606;
+  }
+
+  .latest-projects h3 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .latest-blogs {
+    padding: 50px 0;
+    background-color: #e2d0d0;
+    color: #070606;
+  }
+
+  .latest-blogs h3 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .project-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .project-gallery img {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .inquiry {
+    background: #333;
+    color: #fff;
+    padding: 50px 0;
+  }
+
+  .inquiry h3 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  
+
+  .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: calc(50% - 10px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+  }
+
+  .form-group textarea {
+    height: 100px;
+  }
+
+  button[type="submit"] {
+    padding: 10px 20px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  footer {
+    background: #333;
+    color: #fff;
+    padding: 50px 0;
+  }
+
+  footer .footer-column {
+
+    width: 20%;
+    padding-right: 20px;
+  }
+
+  footer h3 {
+    margin-bottom: 20px;
+  }
+
+
+  footer ul {
+    list-style: none;
+    
+  }
+
+  footer ul li {
+    margin-bottom: 10px;
+  }
+
+  footer ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  footer input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  footer button[type="submit"] {
+    padding: 10px 20px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 18px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <header>
+    
+      <nav>
+        <ul>
+          <li>
+            <select>
+              <option value="" selected disabled>Home</option>
+            </select>
+          <li>
+            <select>
+              <option value="" selected disabled>About Us</option>
+              <option value="history">History</option>
+              <option value="mission">Mission</option>
+              <option value="vision">Vision</option>
+              <option value="team">Our Team</option>
+            </select>
+          </li>
+          <li>
+            <select>
+              <option value="" selected disabled>Select a Service</option>
+              <option value="service1">Service 1</option>
+              <option value="service2">Service 2</option>
+              <option value="service3">Service 3</option>
+            </select>
+          </li>
+          <li>
+            <select>
+              <option value="" selected disabled>Our Skills</option>
+              <option value="skill1">Skill 1</option>
+              <option value="skill2">Skill 2</option>
+              <option value="skill3">Skill 3</option>
+            </select>
+          </li>
+          <li>
+            <select>
+              <option value="" selected disabled>Select a Project</option>
+              <option value="project1">Project 1</option>
+              <option value="project2">Project 2</option>
+              <option value="project3">Project 3</option>
+            </select>
+          </li>
+          <li>
+            <select>
+              <option value="" selected disabled>Contact Us About</option>
+              <option value="general">General Inquiry</option>
+              <option value="quote">Request a Quote</option>
+              <option value="feedback">Feedback</option>
+            </select>
+
+            
+
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div style="font-size: 20px; color: yellow;"><strong><P>Mahnur Corporation Co.</P></strong> </div>
+
+    <div class="contact-info">
+      <p>Call: +1 12345678</p>
+      <form action="#">
+        <input type="text" placeholder="Search..." required>
+        <button type="submit">Search</button>
+       
+       
+
+      </form>
+      
+    </div>
+  </div>
+</header>
+<section class="banner" >
+  <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+  <button>Contact Us</button>
+</section>
+<section class="business-type">
+  <div class="container">
+    <h3>Choose Your Business Type</h3>
+    <div class="business-cards">
+      <div class="card">
+        <h4>Construction and Building</h4>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7RfE2TJB7bQE1Yc9boBPkh_Xu6HbBvYi_xH39oXw0mw&s"width=200 height="150" alt="Construction & Building">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="card">
+        <h4>Construction and Building</h4>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG4PCh0tFOIcj4bhD2Nb45nXq9Giq5IQpjlSrvpIu3e2w7h-KtZDtD3rtv7MiknX4RbJE&usqp=CAU"width=200 height="150" alt="Construction & Building">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="card">
+        <h4>Construction and Building</h4>
+        <img src="https://womeninconstruction.com.au/wp-content/uploads/2022/05/hero-bg-1-scaled-1.jpeg"width=200 height="150" alt="Construction & Building">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="latest-projects">
+  <div class="container">
+    <h3>Our Latest Projects</h3>
+    <div class="project-gallery">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9k9YMYGOkWYrxoR8-9JL-Y1OOEyrEFY1QFA&s" alt="Project 1">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm61i87Q4YcMkvK68u30RRkNFOzK5c2LVLug&s" alt="Project 2">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB0ZMssdfA5Av9HVCwPjKOPireJ2YFju_FwA&s" alt="Project 3">
+      <img src="https://images.pexels.com/photos/439416/pexels-photo-439416.jpeg?cs=srgb&dl=pexels-sevenstormphotography-439416.jpg&fm=jpg" alt="Project 4">
+      <img src="https://png.pngtree.com/thumb_back/fh260/background/20230618/pngtree-residential-building-under-construction-3d-rendering-with-excavator-and-crane-image_3630005.jpg" alt="Project 5">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj8B48koLvSGUQJ8c5lY7waEETCFzBIDb8ncHMKqswsQ&s" alt="Project 6">
+    </div>
+  </div>
+</section>
+<section class="inquiry">
+  
+    <h3>Inquiry Now!</h3>
+    
+    <form action="#">
+      <div class="form-group">
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Phone No." required>
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Subject">
+      
+        <textarea placeholder="Message"></textarea>
+      </div>
+     <h3><button type="submit">Submit</button></h3> 
+
+    </form>
+  </div>
+</section>
+
+<section class="latest-blogs">
+  <div class="container">
+    <h4>Our Latest Blogs</h4>
+    <div class="project-gallery">
+      <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/bridge-creative-construction-wp-website-template.jpg" alt="Project 1">
+      <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/construction-professional-wordpress-theme.jpg" alt="Project 2">
+      <img src="https://eadn-wc01-4486425.nxedge.io/wp-content/uploads/2016/08/SM-3.jpg" alt="Project 3">
+     
+    </div>
+  </div>
+<footer>
+  
+      <div class="logo">
+      <h1>LOGO <span>HERE</span></h1>
+        </div>
+  <div class="container">
+    <div class="footer-column">
+      
+      <h3>DOWNLOAD APP</h3>
+              <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7rZySg24_Aw4tlFkhc2NoKm-o-5NJN7lMKxQByvT43g&s" height="200" width="200">
+
+      <!-- Add app download links or information here -->
+    </div>
+    <div class="footer-column">
+      <h3>MAIN MENU</h3>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="Our project.html">Our Projects</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      
+      <h3>WORK WITH US</h3>
+      <!-- Add career or partnership information here -->
+    </div>
+    <div class="footer-column">
+      <h3>NEWSLETTER</h3>
+      <form action="#">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="footer-column">
+      <h3>STAY CONNECTED</h3>
+      <p>Call: +1 12345678</p>
+      <p>Email: info@companyname.com</p>
+      <!-- Add social media icons or links here -->
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+<!--MAHNOOR ARSHAD QURESHI FA-2022/BS-DFCS/003 -->

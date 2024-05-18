@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <!--MAHNOOR ARSHAD QURESHI FA-2022/BS-DFCS/003 -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select,
+        textarea {
+            width: calc(100% - 12px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #666;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .error {
+            color: #ff0000;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .form-group label,
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            float: left;
+            width: 100%;
+        }
+
+        .form-group span.error {
+            float: left;
+            width: 100%;
+        }
+
+        .form-group span.error:empty {
+            display: none;
+        }
+
+        .success-message {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Flexbox */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .flex-item {
+            width: calc(32% - 10px); /* Adjust as needed */
+        }
+
+        /* Increase size of date of birth input field */
+        #birthDate {
+            width: calc(100% - 12px); /* Adjust as needed */
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <h1>Student Registration Form</h1>
+        <form id="applicationForm">
+            <div class="form-group flex-container">
+                <div class="flex-item">
+                    <label for="firstName">First Name <span class="required">*</span>:</label>
+                    <input placeholder="Enter first name" type="text" id="firstName" name="firstName" maxlength="20" required>
+                    <span class="error" id="firstNameError"></span>
+                </div>
+                <div class="flex-item">
+                    <label for="middleName">Middle Name:</label>
+                    <input placeholder="Enter middle name" type="text" id="middleName" name="middleName" maxlength="20">
+                    <span class="error" id="middleNameError"></span>
+                </div>
+                <div class="flex-item">
+                    <label for="lastName">Last Name <span class="required">*</span>:</label>
+                    <input placeholder="Enter last name" type="text" id="lastName" name="lastName" maxlength="20" required>
+                    <span class="error" id="lastNameError"></span>
+                </div>
+            </div>
+            <div class="form-group flex-container">
+                <div class="flex-item">
+                    <label for="birthDate">Birth Date <span class="required">*</span>:</label>
+                    <input type="date" id="birthDate" name="birthDate" required>
+                    <span class="error" id="birthDateError"></span>
+                </div>
+
+            <div class="flex-item">
+                <label for="gender">Gender <span class="required">*</span>:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <span class="error" id="genderError"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="address">Address <span class="required">*</span>:</label>
+            <textarea id="address" name="address" maxlength="250" required></textarea>
+            <span class="error" id="addressError"></span>
+        </div>
+        <div class="form-group flex-container">
+            <div class="flex-item">
+                <label for="city">City <span class="required">*</span>:</label>
+                <input type="text" id="city" name="city" maxlength="50" required>
+                <span class="error" id="cityError"></span>
+            </div>
+            <div class="flex-item">
+                <label for="state">State <span class="required">*</span>:</label>
+                <input type="text" id="state" name="state" maxlength="50" required>
+                <span class="error" id="stateError"></span>
+            </div>
+            <div class="flex-item">
+                <label for="postalCode">Postal Code <span class="required">*</span>:</label>
+                <input type="text" id="postalCode" name="postalCode" maxlength="5" required>
+                <span class="error" id="postalCodeError"></span>
+            </div>
+        </div>
+        
+        <div class="form-group flex-container">
+            <div class="flex-item">
+                <label for="email">Email <span class="required">*</span>:</label>
+                <input placeholder="ex: name@example.com" type="email" id="email" name="email" maxlength="250" required>
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="flex-item">
+                <label for="mobileNumber">Mobile Number <span class="required">*</span>:</label>
+                <input placeholder="(000) 000-00000" type="text" id="mobileNumber" name="mobileNumber" maxlength="12" required>
+                <span class="error" id="mobileNumberError"></span>
+            </div>
+        </div>
+        
+        <div class="form-group flex-container">
+            <div class="flex-item">
+                <label for="phoneNumber">Phone Number:</label>
+                <input placeholder="(000) 000-00000" type="text" id="phoneNumber" name="phoneNumber" maxlength="12">
+                <span class="error" id="phoneNumberError"></span>
+            </div>
+            <div class="flex-item">
+                <label for="workNumber">Work Number:</label>
+                <input placeholder="(000) 000-00000" type="text" id="workNumber" name="workNumber" maxlength="12">
+                <span class="error" id="workNumberError"></span>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="company">Company <span class="required">*</span>:</label>
+            <input type="text" id="company" name="company" maxlength="150" required>
+            <span class="error" id="companyError"></span>
+        </div>
+        <div class="form-group">
+            <label for="courses">Courses <span class="required">*</span>:</label>
+            <select id="courses" name="courses" required>
+                <option value="">Select</option>
+                <option value="course1">Course 1</option>
+                <option value="course2">Course 2</option>
+                <option value="course3">Course 3</option>
+                <option value="course4">Course 4</option>
+                <option value="course5">Course 5</option>
+                <option value="course6">Course 6</option>
+                <option value="course7">Course 7</option>
+                <option value="course8">Course 8</option>
+                <option value="course9">Course 9</option>
+                <option value="course10">Course 10</option></select>
+            <span class="error" id="coursesError"></span>
+        </div>
+        <div class="form-group">
+            <label for="additionalComments">Additional Comments (Max 500 characters):</label>
+            <textarea id="additionalComments" name="additionalComments" maxlength="500"></textarea>
+            <span class="error" id="additionalCommentsError"></span>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="submitBtn">Submit</button>
+            <button type="button" id="clearBtn">Clear</button>
+        </div>
+    </form>
+</div>
+<div id="successPage" style="display: none;">
+    <div class="success-message">Form submitted successfully! Click <a href="#" onclick="window.location.reload();">here</a> to go back to the form.</div>
+</div>
+<script>
+    document.getElementById("applicationForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the form from submitting
+
+        // Validate the form fields
+        if (!validateForm()) {
+            return;
+        }
+
+        // Display the success message and hide the form
+        document.getElementById("container").style.display = "none";
+        document.getElementById("successPage").style.display = "block";
+    });
+
+    document.getElementById("clearBtn").addEventListener("click", function () {
+        document.getElementById("applicationForm").reset(); // Reset the form fields
+    });
+
+    function validateForm() {
+        let isValid = true;
+
+        // Reset error messages
+        document.querySelectorAll(".error").forEach(function (el) {
+            el.textContent = "";
+        });
+
+        // Validate each required field
+        if (!document.getElementById("firstName").value.trim()) {
+            document.getElementById("firstNameError").textContent = "First name is required";
+            isValid = false;
+        }
+
+        if (!document.getElementById("lastName").value.trim()) {
+            document.getElementById("lastNameError").textContent = "Last name is required";
+            isValid = false;
+        }
+
+        if (!document.getElementById("birthDate").value.trim()) {
+            document.getElementById("birthDateError").textContent = "Birth date is required";
+            isValid = false;
+        }
+
+        if (!document.getElementById("gender").value.trim()) {
+            document.getElementById("genderError").textContent = "Gender is required";
+            isValid = false;
+        }
+
+        if (!document.getElementById("address").value.trim()) {
+            document.getElementById("addressError").textContent = "Address is required";
+            isValid = false;
+        }
+
+        if (!document.getElementById("city").value.trim()) {
+            document.getElementById("cityError").textContent = "City is required";
+            isValid = false;
+        }
+
+        if (!document.getElementById("state").value.trim()) {
+            document.getElementById("stateError").textContent = "State is required";
+            isValid = false;
+        }
+
+        if (!document.getElementById("postalCode").value.trim()) {
+            document.getElementById("postalCodeError").textContent = "Postal code is required";
+            isValid = false;
+        }
+
+        if (!document.getElementById("email").value.trim()) {
+            document.getElementById("emailError").textContent = "Email is required";
+            isValid = false;
+        }
+
+        if (!document.getElementById("mobileNumber").value.trim()) {
+            document.getElementById("mobileNumberError").textContent = "Mobile number is required";
+            isValid = false;
+        }
+
+        if (!document.getElementById("company").value.trim()) {
+            document.getElementById("companyError").textContent = "Company is required";
+            isValid = false;
+        }
+
+        if (!document.getElementById("courses").value.trim()) {
+            document.getElementById("coursesError").textContent = "Courses are required";
+            isValid = false;
+        }
+
+        return isValid;
+    }
+</script>
+</body>
+</html>
+<!--MAHNOOR ARSHAD QURESHI FA-2022/BS-DFCS/003 -->
